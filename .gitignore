@@ -4,8 +4,6 @@
 *.dll
 *.so
 *.dylib
-configs/*
-log/*
 # Test binary, built with `go test -c`
 *.test
 
@@ -14,3 +12,5 @@ log/*
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+/configs/
+/log/
