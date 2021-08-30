@@ -10,3 +10,4 @@
 {"level":"ERROR","time":"2021-08-30T15:32:05.817+0800","caller":"controllers/user.go:35","msg":"mysql.Register() failed","error":"创建用户ID失败"}
 {"level":"INFO","time":"2021-08-30T15:33:37.590+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-08-30T15:39:59.889+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-30T15:56:47.734+0800","caller":"logger/logger.go:44","msg":"init logger success"}

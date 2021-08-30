@@ -4,6 +4,7 @@ import (
 	"Back/internal/repo/mysql"
 	"Back/logger"
 	"Back/pkg/snowflake"
+	"Back/pkg/jwt"
 	"Back/routers"
 	"Back/settings"
 	"fmt"
@@ -14,6 +15,9 @@ func main() {
 		fmt.Printf("load config failed, err:%v\n", err)
 		return
 	}
+
+	jwt.Init(settings.Conf.JwtConfig)
+	
 	if err := logger.Init(settings.Conf.LogConfig, settings.Conf.Mode); err != nil {
 		fmt.Printf("init logger failed, err:%v\n", err)
 		return

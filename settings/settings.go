@@ -15,6 +15,7 @@ type AppConfig struct {
 	*LogConfig   `mapstructure:"log"`
 	*MySQLConfig `mapstructure:"mysql"`
 	*RedisConfig `mapstructure:"redis"`
+	*JwtConfig `mapstructure:"jwt"`
 }
 
 type MySQLConfig struct {
@@ -44,12 +45,17 @@ type LogConfig struct {
 	MaxBackups int    `mapstructure:"max_backups"`
 }
 
+
+type JwtConfig struct {
+	SecretKey string `mapstructure:"secretKey"`
+}
+
+
 func Init() error {
 	viper.SetConfigFile("./configs/config.yaml")
 
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
-		fmt.Println("夭寿啦~配置文件被人修改啦...")
 		viper.Unmarshal(&Conf)
 	})
 

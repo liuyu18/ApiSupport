@@ -4,6 +4,7 @@ import (
 	"errors"
 	"time"
 
+	"Back/settings"
 	"github.com/dgrijalva/jwt-go"
 )
 
@@ -16,7 +17,12 @@ type MyClaims struct {
 	jwt.StandardClaims
 }
 
-var mySecret = []byte("夏天夏天悄悄过去")
+var mySecret  []byte
+
+func Init(cfg *settings.JwtConfig) {
+	mySecret = []byte(cfg.SecretKey)
+}
+
 
 func keyFunc(_ *jwt.Token) (i interface{}, err error) {
 	return mySecret, nil
