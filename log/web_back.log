@@ -1,0 +1,12 @@
+{"level":"INFO","time":"2021-08-29T22:13:06.804+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-29T22:14:07.500+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-29T22:16:47.573+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-29T22:38:21.945+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-29T22:39:27.905+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-29T23:00:38.888+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-30T15:29:04.042+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-30T15:30:59.052+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"ERROR","time":"2021-08-30T15:31:28.189+0800","caller":"controllers/user.go:35","msg":"mysql.Register() failed","error":"创建用户ID失败"}
+{"level":"ERROR","time":"2021-08-30T15:32:05.817+0800","caller":"controllers/user.go:35","msg":"mysql.Register() failed","error":"创建用户ID失败"}
+{"level":"INFO","time":"2021-08-30T15:33:37.590+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-08-30T15:39:59.889+0800","caller":"logger/logger.go:44","msg":"init logger success"}
