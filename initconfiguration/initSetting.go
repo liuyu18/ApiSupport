@@ -53,7 +53,6 @@ type JwtConfig struct {
 
 func init() {
 
-
 	fmt.Println("call setting init")
 	viper.SetConfigFile("./configs/config.yaml")
 
@@ -69,6 +68,6 @@ func init() {
 	if err := viper.Unmarshal(&Conf); err != nil {
 		panic(fmt.Errorf("unmarshal to Conf failed, err:%v", err))
 	}
-	
+
 	// return err
 }
