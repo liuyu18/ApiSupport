@@ -11,10 +11,10 @@ import (
 )
 
 func main() {
-	if err := settings.Init(); err != nil {
-		fmt.Printf("load config failed, err:%v\n", err)
-		return
-	}
+	// if err := settings.Init(); err != nil {
+	// 	fmt.Printf("load config failed, err:%v\n", err)
+	// 	return
+	// }
 
 	jwt.Init(settings.Conf.JwtConfig)
 	
