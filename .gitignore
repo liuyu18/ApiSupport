@@ -12,6 +12,6 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-/configs/
+/configs/config.yaml
 /log/
 /.idea/

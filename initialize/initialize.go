@@ -1,4 +1,4 @@
-package settings
+package initialize
 
 import (
 	"fmt"
@@ -51,10 +51,15 @@ type JwtConfig struct {
 }
 
 
-func init() {
+func InitWithEnv(env string) error {
 
 	fmt.Println("call setting init")
-	viper.SetConfigFile("./configs/config.yaml")
+	if env == "dev" {
+		viper.SetConfigFile("./configs/config_dev.yaml")
+	} else {
+		viper.SetConfigFile("./configs/config.yaml")
+	}
+	
 
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
@@ -69,5 +74,5 @@ func init() {
 		panic(fmt.Errorf("unmarshal to Conf failed, err:%v", err))
 	}
 
-	// return err
+	return err
 }

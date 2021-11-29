@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"Back/settings"
+	"Back/initialize"
 	"net"
 	"net/http"
 	"net/http/httputil"
@@ -19,7 +19,7 @@ import (
 var lg *zap.Logger
 
 // Init 初始化lg
-func Init(cfg *settings.LogConfig, mode string) (err error) {
+func Init(cfg *initialize.LogConfig, mode string) (err error) {
 	writeSyncer := getLogWriter(cfg.Filename, cfg.MaxSize, cfg.MaxBackups, cfg.MaxAge)
 	encoder := getEncoder()
 	var l = new(zapcore.Level)

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"Back/settings"
+	"Back/initialize"
 	"github.com/dgrijalva/jwt-go"
 )
 
@@ -19,7 +19,7 @@ type MyClaims struct {
 
 var mySecret  []byte
 
-func Init(cfg *settings.JwtConfig) {
+func Init(cfg *initialize.JwtConfig) {
 	mySecret = []byte(cfg.SecretKey)
 }
 
